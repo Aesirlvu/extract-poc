@@ -76,6 +76,39 @@
       "meta": {
         "license": "MIT"
       }
+    },
+    {
+      "name": "mobile-shell",
+      "type": "registry:block",
+      "title": "Mobile-first shell",
+      "description": "Mobile-first shell with bottom navigation.",
+      "files": [
+        {
+          "path": "components/shell/mobile-nav.tsx",
+          "type": "registry:block",
+          "target": "@components/shell/mobile-nav.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "Aesirlvu/extract-poc/app-shell"
+      ],
+      "meta": {
+        "layout": "mobile-first"
+      }
+    },
+    {
+      "name": "full-kit",
+      "type": "registry:item",
+      "title": "Full kit",
+      "description": "Everything: base setup, docs, shell.",
+      "registryDependencies": [
+        "Aesirlvu/project-template/base-setup",
+        "Aesirlvu/extract-poc/docs-pack",
+        "Aesirlvu/extract-poc/app-shell"
+      ],
+      "meta": {
+        "bundle": true
+      }
     }
   ]
 }
