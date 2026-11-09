@@ -1,0 +1,81 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "extract-poc",
+  "homepage": "https://github.com/Aesirlvu/extract-poc",
+  "items": [
+    {
+      "name": "docs-pack",
+      "type": "registry:file",
+      "title": "Docs pack",
+      "description": "Markdown docs and agent instructions distributed as files.",
+      "files": [
+        {
+          "path": "docs/architecture.md",
+          "type": "registry:file",
+          "target": "~/docs/architecture.md"
+        },
+        {
+          "path": "AGENTS.md",
+          "type": "registry:file",
+          "target": "~/AGENTS.md"
+        },
+        {
+          "path": "claude/CLAUDE.md",
+          "type": "registry:file",
+          "target": "~/CLAUDE.md"
+        }
+      ],
+      "docs": "Installs agent instructions and architecture docs into the project root."
+    },
+    {
+      "name": "app-shell",
+      "type": "registry:block",
+      "title": "App shell",
+      "description": "Mobile-first app shell with responsive sidebar and header.",
+      "files": [
+        {
+          "path": "components/shell/app-shell.tsx",
+          "type": "registry:block",
+          "target": "@components/shell/app-shell.tsx"
+        },
+        {
+          "path": "components/shell/nav.tsx",
+          "type": "registry:block",
+          "target": "@components/shell/nav.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "Aesirlvu/project-template/base-setup"
+      ]
+    },
+    {
+      "name": "dashboard-layout",
+      "type": "registry:page",
+      "title": "Dashboard layout",
+      "description": "Route group layout for dashboard pages.",
+      "files": [
+        {
+          "path": "app/(app)/dashboard/layout.tsx",
+          "type": "registry:page",
+          "target": "~/app/(app)/dashboard/layout.tsx"
+        }
+      ]
+    },
+    {
+      "name": "custom-skill",
+      "type": "registry:item",
+      "title": "Custom skill",
+      "description": "An agent skill packaged with its frontmatter.",
+      "files": [
+        {
+          "path": "skills/custom-skill/SKILL.md",
+          "type": "registry:item",
+          "target": "~/skills/custom-skill/SKILL.md"
+        }
+      ],
+      "meta": {
+        "license": "MIT"
+      }
+    }
+  ]
+}
